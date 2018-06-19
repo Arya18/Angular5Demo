@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
 
   showUserProfile(id){
     console.log(id);
-    this.router.navigate(['users/:id']);
+    this.router.navigate(['users', id]);
   }
 
 }

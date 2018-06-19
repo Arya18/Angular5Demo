@@ -1,11 +1,11 @@
 <div>
   <p *ngFor="let user of users; let i = index;">
-    <span *ngIf="user.id == id">
+    <!-- <span *ngIf="user.id == id"> -->
       <span>src="{{user.profilePic}}"</span>
       {{user.name}} 
       <span style="display: block">{{user.email}}</span> 
       Friends:<span *ngFor="let friend of user.friends"> {{friend.name}},</span> 
-    </span>
+    <!-- </span> -->
   </p>
 </div>
 

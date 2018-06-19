@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfilesService } from '../user-profiles.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -9,9 +10,12 @@ import { UserProfilesService } from '../user-profiles.service';
 export class UserProfileComponent implements OnInit {
 
   users = [];
-  constructor(private _data: UserProfilesService) { }
+  constructor(private _data: UserProfilesService, private route: ActivatedRoute, private _router: Router) {
+    console.log(this._router.url);
+   }
 
   ngOnInit() {
+    // var protocol = $location.path();
     this._data.user.subscribe(res => this.users = res);
     this._data.changeGoal(this.users);
   }

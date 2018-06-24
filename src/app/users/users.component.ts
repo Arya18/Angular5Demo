@@ -28,7 +28,5 @@ export class UsersComponent implements OnInit {
         console.log(this.userProfile);
       }
     }
-    
   }
-
 }

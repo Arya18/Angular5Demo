@@ -1,6 +1,6 @@
 <div>
   <p *ngFor="let user of users; let i = index;">
-    <span *ngIf="user.id == id">
+    <span>
       <span>src="{{user.profilePic}}"</span>
       {{user.name}} 
       <span style="display: block">{{user.email}}</span> 

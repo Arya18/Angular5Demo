@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class UserProfilesService {
 
-  usersData = [{
+ usersData = [{
 		"name": "Arun",
 		"id": 1,
 		"email": "aryanpra16dec@gmail.com",

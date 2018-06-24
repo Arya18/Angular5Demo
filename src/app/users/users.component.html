@@ -1,5 +1,16 @@
 <div>
-  <p *ngFor="let user of users">
-    <span (click)="showUserProfile(user.id)">{{user.name}}</span>
+    <ul *ngFor="let user of users" style="display: inline">
+      <li><span (click)="showUserProfile(user.id)">{{user.name}}</span></li>
+    </ul>
+</div>
+
+<div *ngIf="usersDetails">
+  <p>
+    <span>
+      <img style="width:200px;height:200px; " src="{{userProfile.profilePic}}" />
+      <p>{{userProfile.name}}</p>
+      <span style="display: block">{{userProfile.email}}</span> 
+      Friends:<span *ngFor="let friend of userProfile.friends"> {{friend.name}},</span> 
+    </span>
   </p>
 </div>

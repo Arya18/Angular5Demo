@@ -20,13 +20,22 @@ export class UsersComponent implements OnInit {
     this._data.changeGoal(this.users);
   }
 
-  showUserProfile(id){
+  showUserProfile(id, usr){
     this.usersDetails = true;
+    if(usr == "user"){
     for (var key in this.users){
       if(this.users[key].id == id){
         this.userProfile = this.users[key];
         console.log(this.userProfile);
       }
     }
+  }
+  else if(usr == "friend"){
+    console.log(this.userProfile.friends[id]);
+    console.log();
+    for (var key in this.userProfile){
+    //  console.log(this.userProfile.friends)
+    }
+  }
   }
 }

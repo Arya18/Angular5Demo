@@ -1,6 +1,6 @@
 <div>
     <ul *ngFor="let user of users" style="display: inline">
-      <li><span (click)="showUserProfile(user.id)">{{user.name}}</span></li>
+      <li><span (click)='showUserProfile(user.id, "user")'>{{user.name}}</span></li>
     </ul>
 </div>
 
@@ -10,7 +10,7 @@
       <img style="width:200px;height:200px; " src="{{userProfile.profilePic}}" />
       <p>{{userProfile.name}}</p>
       <span style="display: block">{{userProfile.email}}</span> 
-      Friends:<span *ngFor="let friend of userProfile.friends"> {{friend.name}},</span> 
+      Friends:<span *ngFor="let friend of userProfile.friends" (click)='showUserProfile(friend.id, "friend")'> {{friend.name}},</span> 
     </span>
   </p>
 </div>

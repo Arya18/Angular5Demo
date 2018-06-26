@@ -1,6 +1,6 @@
 <div>
     <ul *ngFor="let user of users" style="display: inline">
-      <li><span (click)='showUserProfile(user.id, "user")'>{{user.name}}</span></li>
+      <li><span (click)='showUserProfile(user.id, "user")'>{{user.name | uppercase}}</span></li>
     </ul>
 </div>
 
@@ -9,8 +9,23 @@
     <span>
       <img style="width:200px;height:200px; " src="{{userProfile.profilePic}}" />
       <p>{{userProfile.name}}</p>
-      <span style="display: block">{{userProfile.email}}</span> 
-      Friends:<span *ngFor="let friend of userProfile.friends" (click)='showUserProfile(friend.id, "friend")'> {{friend.name}},</span> 
+      <p style="display: block">Email: {{userProfile.email}}</p> 
+      <p><strong>Friends:</strong></p> 
+      <ul *ngFor="let friend of userProfile.friends"> 
+        <li><span (click)='showUserProfile(friend.id, "friend")'>{{friend.name}}</span></li>
+      </ul> 
     </span>
   </p>
+  <div>
+      <p><strong>Suggestions:</strong></p>
+      <ul *ngFor="let suggestion of dataSuggest"  style="display: inline">
+        <li >{{suggestion.name}} <span style="margin:7px;"><Button 
+          style="border: 0;
+          padding: 0.3em 1.2em;
+          background: #A5F883;
+          color: #003A61;
+          cursor: pointer;">Add</Button></span></li>
+      </ul>
+  </div>
 </div>
+

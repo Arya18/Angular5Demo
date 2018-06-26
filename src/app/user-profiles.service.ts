@@ -19,7 +19,13 @@ export class UserProfilesService {
 			{
 				"name": "Gaurav",
 				"id": 3,
-				"email": "gaurav695@gmail.com"
+				"email": "gaurav695@gmail.com",
+				"profilePic":"../assets/img/arunDp.jpg",
+				"friends":[{
+					"name": "Akash",
+					"id": 31,
+					"email": "akash12@gmail.com"
+				}]
 			},
 			{
 				"name": "rahul",
@@ -34,19 +40,19 @@ export class UserProfilesService {
 		"email": "sumit65@gmail.com",
     "profilePic":"../assets/img/sumitDp.jpg",
 		"friends": [{
-				"name": "Deepak",
+				"name": "Parihar",
 				"id": 2,
-				"email": "deepakkaushal198@gmail.com"
+				"email": "Parihar123@gmail.com"
 			},
 			{
-				"name": "Gaurav",
+				"name": "KApil",
 				"id": 3,
-				"email": "gaurav695@gmail.com"
+				"email": "kapil695@gmail.com"
 			},
 			{
-				"name": "rahul",
+				"name": "Shivam",
 				"id": 4,
-				"email": "rahul134@gmail.com"
+				"email": "shivam134@gmail.com"
 			}
 		]
 	}

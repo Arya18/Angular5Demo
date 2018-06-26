@@ -18,13 +18,13 @@
   </p>
   <div>
       <p><strong>Suggestions:</strong></p>
-      <ul *ngFor="let suggestion of dataSuggest"  style="display: inline">
-        <li >{{suggestion.name}} <span style="margin:7px;"><Button 
+      <ul *ngFor="let suggestion of dataSuggest; let i = index;"  style="display: inline">
+        <li >{{suggestion.name}} <span style="margin:7px;"><Button (click) ='addFriend(suggestion, i)'
           style="border: 0;
           padding: 0.3em 1.2em;
           background: #A5F883;
           color: #003A61;
-          cursor: pointer;">Add</Button></span></li>
+          cursor: pointer;">{{buttonLabel}}</Button></span></li>
       </ul>
   </div>
 </div>

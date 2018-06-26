@@ -15,6 +15,7 @@ export class UsersComponent implements OnInit {
   usersDetails = false;
   userProfile : any;
   friendprofile : any;
+  buttonLabel = "Add";
   constructor(private route: ActivatedRoute, private _data: UserProfilesService, private router: Router, private _suggestedData: UsersService) { }
 
   ngOnInit() {
@@ -45,5 +46,10 @@ export class UsersComponent implements OnInit {
       }
     }
   }
+}
+  addFriend(obj, i){
+    this.userProfile.friends.push(obj);
+    this.dataSuggest.splice(i, 1);
+    console.log(this.userProfile.friends);
   }
 }

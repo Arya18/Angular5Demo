@@ -10,13 +10,13 @@ export class UsersService {
 		"name": "John",
 		"id": 21,
 		"email": "john@legend.com",
-    "profilePic":"../assets/img/arunDp.jpg",
+    "profilePic":"../assets/img/dp4.jpg",
 	},
 	{
 		"name": "Ethan",
 		"id": 22,
 		"email": "ethan@mi5.com",
-    "profilePic":"../assets/img/sumitDp.jpg",
+    "profilePic":"../assets/img/ethan.jpg",
 	}
 ];
 

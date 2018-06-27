@@ -1,6 +1,6 @@
 <div>
     <ul *ngFor="let user of users" style="display: inline">
-      <li><span (click)='showUserProfile(user.id, "user")'>{{user.name | uppercase}}</span></li>
+      <li><span (click)='showUserProfile(user.id, "user")' style="cursor: pointer;">{{user.name | uppercase}}</span></li>
     </ul>
 </div>
 
